@@ -28,7 +28,7 @@ public class SumOfNumbers
 	// while-loop function
 	int whileLoop() {
 		int total = 0;
-		int i = 0;
+		int i     = 0;
 
 		while(list.size() > i) {
 			total += list.get(i);
@@ -38,11 +38,16 @@ public class SumOfNumbers
 		return total;
 	}
 
-	// recursion function
+	// recursive function
 	int recursion() {
  		return recursionHelper(list.get(list.size() - 1));	
 	}
 
+	/**
+	 * Adds all the values in the list recursively.
+	 * @param  n [A value in the list]
+	 * @return   [The sum of the values in the list.]
+	 */
 	int recursionHelper(int n) {
 		
 		list.remove(list.size() - 1);
@@ -50,9 +55,19 @@ public class SumOfNumbers
 		if (list.isEmpty()) {
 			return n;
 		} else {
-			System.out.print(list.get(list.size() - 1) + "\n");
 			return n + recursionHelper(list.get(list.size() - 1));
 		}
+	}
+
+	void print() {
+		Iterator<Integer> it = list.iterator();
+
+		System.out.print("sum([");
+		while(it.hasNext()) {
+			System.out.print(" " + it.next() + " ");
+		}
+		System.out.print("]) = ");
+
 	}
 
 
@@ -63,7 +78,9 @@ public class SumOfNumbers
 	   	data.add(10);
 	   	data.add(12);
 	   	data.add(20);
+
 	   	SumOfNumbers x = new SumOfNumbers(data);
+	   	x.print();
 	   	System.out.print(x.recursion() + "\n");
 
    }
