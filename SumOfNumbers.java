@@ -43,7 +43,7 @@ public class SumOfNumbers
  		return recursionHelper(list.get(list.size() - 1));	
 	}
 
-	/**
+	/*
 	 * Adds all the values in the list recursively.
 	 * @param  n [A value in the list]
 	 * @return   [The sum of the values in the list.]
