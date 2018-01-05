@@ -1,5 +1,8 @@
-/* Write three functions that compute the sum of the numbers in a 
-   given list using a for-loop, a while-loop, and recursion.*/
+/* 
+	January 4, 2018
+	Write three functions that compute the sum of the numbers
+	in a given list using a for-loop, a while-loop, and recursion.
+*/
 import java.io.*;
 import java.util.*;
 
